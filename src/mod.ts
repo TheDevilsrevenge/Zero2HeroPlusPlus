@@ -23,15 +23,20 @@ class Mod implements IPostDBLoadMod
         const zthProfile = JSON.parse(JSON.stringify(EoDProfile));
         const bearInventoryData = JSON.parse(readFileSync(join(__dirname, "./bear_inventory.json"), "utf-8"));
         const usecInventoryData = JSON.parse(readFileSync(join(__dirname, "./usec_inventory.json"), "utf-8"));
-        const traderStanding = JSON.parse(readFileSync(join(__dirname, "./traders.json"), "utf-8")); 
+        const traderStanding = JSON.parse(readFileSync(join(__dirname, "./traders.json"), "utf-8"));
+        const description = JSON.parse(readFileSync(join(__dirname, "./descLocale.json"), "utf-8"));
         zthProfile.bear.character.Inventory = bearInventoryData;
         zthProfile.usec.character.Inventory = usecInventoryData;
         zthProfile.bear.trader = traderStanding;
         zthProfile.usec.trader = traderStanding;
+        zthProfile.descriptionLocaleKey = description;
+
+
+
 
         tables.templates.profiles[profileName] = zthProfile;
 
-        logger.logWithColor("[Joey's ZTH Mod] Joey's ZTH++ Loaded successfully", LogTextColor.YELLOW);
+        logger.logWithColor("[Joey's ZTH Mod] Joey's ZTH++ Loaded successfully", LogTextColor.GREEN);
     }
 }
 
