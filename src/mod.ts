@@ -22,9 +22,12 @@ class Mod implements IPostDBLoadMod
         const EoDProfile = tables.templates.profiles["Edge Of Darkness"];
         const zthProfile = JSON.parse(JSON.stringify(EoDProfile));
         const bearInventoryData = JSON.parse(readFileSync(join(__dirname, "./bear_inventory.json"), "utf-8"));
-        const usecInventoryData = JSON.parse(readFileSync(join(__dirname, "./usec_inventory.json"), "utf-8")); 
+        const usecInventoryData = JSON.parse(readFileSync(join(__dirname, "./usec_inventory.json"), "utf-8"));
+        const traderStanding = JSON.parse(readFileSync(join(__dirname, "./traders.json"), "utf-8")); 
         zthProfile.bear.character.Inventory = bearInventoryData;
         zthProfile.usec.character.Inventory = usecInventoryData;
+        zthProfile.bear.trader = traderStanding;
+        zthProfile.usec.trader = traderStanding;
 
         tables.templates.profiles[profileName] = zthProfile;
 
