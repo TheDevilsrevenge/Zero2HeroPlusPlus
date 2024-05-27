@@ -1,1 +1,1 @@
-# Joey's Zero to Hero profile for Singleplayer Tarkov
+# **Joey's Zero to Hero profile for Singleplayer Tarkov**
