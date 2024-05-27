@@ -19,8 +19,8 @@ class Mod implements IPostDBLoadMod
         const tables = databaseServer.getTables();
         
         
-        const originalZthProfile = tables.templates.profiles["Edge Of Darkness"];
-        const zthProfile = JSON.parse(JSON.stringify(originalZthProfile));
+        const EoDProfile = tables.templates.profiles["Edge Of Darkness"];
+        const zthProfile = JSON.parse(JSON.stringify(EoDProfile));
         const bearInventoryData = JSON.parse(readFileSync(join(__dirname, "./bear_inventory.json"), "utf-8"));
         const usecInventoryData = JSON.parse(readFileSync(join(__dirname, "./usec_inventory.json"), "utf-8")); 
         zthProfile.bear.character.Inventory = bearInventoryData;
