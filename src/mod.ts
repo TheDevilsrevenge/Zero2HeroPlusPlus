@@ -1,9 +1,9 @@
 import { DependencyContainer } from "tsyringe";
-import { IPostDBLoadMod } from "@spt-aki/models/external/IPostDBLoadMod";
-import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
-import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { LogTextColor } from "@spt-aki/models/spt/logging/LogTextColor";
-import { LogBackgroundColor } from "@spt-aki/models/spt/logging/LogBackgroundColor";
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { ILogger } from "@spt/models/spt/utils/ILogger";
+import { DatabaseServer } from "@spt/servers/DatabaseServer";
+import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
+import { LogBackgroundColor } from "@spt/models/spt/logging/LogBackgroundColor";
 import { readFileSync } from "fs";
 import { join } from "path";
 
@@ -25,6 +25,7 @@ class Mod implements IPostDBLoadMod
         const usecInventoryData = JSON.parse(readFileSync(join(__dirname, "./usec_inventory.json"), "utf-8"));
         const traderStanding = JSON.parse(readFileSync(join(__dirname, "./traders.json"), "utf-8"));
         const description = JSON.parse(readFileSync(join(__dirname, "./descLocale.json"), "utf-8"));
+        
         zthProfile.bear.character.Inventory = bearInventoryData;
         zthProfile.usec.character.Inventory = usecInventoryData;
         zthProfile.bear.trader = traderStanding;
