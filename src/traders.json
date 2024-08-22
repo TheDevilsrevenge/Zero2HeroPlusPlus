@@ -1,3 +1,4 @@
+{
 "initialLoyaltyLevel": {
     "54cb50c76803fa8b248b4571": 1,
     "54cb57776803fa99248b456e": 1,
@@ -17,3 +18,4 @@
 "lockedByDefaultOverride": [
     "579dc571d53a0658a154fbec"
 ]
+}
