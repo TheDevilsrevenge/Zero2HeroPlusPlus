@@ -1,10 +1,10 @@
 {
     "name": "Zero2Hero++",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "main": "src/mod.js",
     "license": "MIT",
     "author": "TheDevilsrevenge",
-    "sptVersion": "~3.9",
+    "sptVersion": "~3.10",
     "scripts": {
         "setup": "npm -i",
         "build": "node ./packageBuild.ts"
